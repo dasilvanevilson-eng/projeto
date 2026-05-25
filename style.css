@@ -87,7 +87,10 @@ body * {
 }
 .light #switch button {
   /*esta função está configurada no final do código e serve para mudar o íconde dia e noite de forma suave*/
-  animation: slide-in 0.4s forwards;
+  animation: slide-in 0.2s forwards;
+}
+#switch button:hover {
+  outline: 2px solid;
 }
 #switch span {
   display: block;
