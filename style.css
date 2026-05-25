@@ -82,10 +82,12 @@ body * {
   /*deixa a figura redonda centralizda em relação á figura de trás*/
   top: 50%;
   transform: translateY(-50%);
+  /*faz a botão que muda dia e noite eslizar suavemente => variável slide-back foi definida no final do programa*/
+  animation: slide-back 0.2s;
 }
 .light #switch button {
-  right: 0;
-  left: initial;
+  /*esta função está configurada no final do código e serve para mudar o íconde dia e noite de forma suave*/
+  animation: slide-in 0.4s forwards;
 }
 #switch span {
   display: block;
@@ -161,5 +163,24 @@ Obs.: o comando abaixo só fnciona se existe o viewport já definido que neste c
 
   .light {
     --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/* Animations */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
